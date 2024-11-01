@@ -222,3 +222,8 @@ export const userDetails = [
     newsfeed: "1234",
   },
 ];
+// MileStone Design
+// https://www.figma.com/design/WSDIXs1BdGilcQZJ32S7JY/Milestone---Project?node-id=487-83339&t=dgprVwnzibfJkq4A-1
+
+// Updated
+// https://www.figma.com/design/zpHb1r9gkFPu3K95m686Bk/Milestone---Project?node-id=1-8333&t=q9LMySj8QwRsAwbj-1

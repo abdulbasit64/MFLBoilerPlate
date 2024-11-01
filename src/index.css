@@ -72,19 +72,59 @@ h6 {
   font-family: Inter, system-ui, Helvetica, Arial, sans-serif;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: #121212;
-  background-color: #ffffff;
-  --primary-color: #000000;
-  --secondary-color: #000000;
-  --accent-color: #000000;
-  --background-color: #000000;
-  --white-bg: #fff;
-  --danger: #EE2E27;
-  --success: #28AA72;
-  --placeholder-color: #666;
-  --input-label: #222;
-  --disabled-color: #ccc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --primary-background-color: #fff;
+  --secondary-background-color: #f7f7f7;
+
+  --primary-text-color: #000;
+  --secondary-text-color: #4b4c53;
+
+  --primary-border-color: #4b4c53;
+
+  --button-solid-background-color: #000;
+  --button-solid-text-color: #fff;
+
+  --button-outlined-background-color: transparent;
+  --button-outlined-text-color: #000;
+
+  --alert-color: #fff9e7;
+  --alert-border-color: #ffbf00;
+  --alert-text-color: #b8952f;
+}
+
+[data-theme="dark"] {
+  --primary-background-color: #1f2028;
+  --secondary-background-color: #2e3039;
+
+  --primary-text-color: rgba(255, 255, 255, 0.87);
+  --secondary-text-color: #4b4c53;
+
+  --primary-border-color: #4b4c53;
+
+  --button-solid-background-color: #fff;
+  --button-solid-text-color: #000;
+
+  --button-outlined-background-color: transparent;
+  --button-outlined-text-color: #fff;
+}
+
+[data-theme="purple"] {
+  --primary-background-color: rgba(24, 16, 40, 1);
+  --secondary-background-color: rgba(44, 36, 70, 1);
+
+  --primary-text-color: rgba(255, 255, 255, 0.87);
+  --secondary-text-color: #8549a7;
+
+  --primary-border-color: #8549a7;
+
+  --button-solid-background-color: #fff;
+  --button-solid-text-color: #000;
+
+  --button-outlined-background-color: transparent;
+  --button-outlined-text-color: #fff;
 }
 
 @media (prefers-color-scheme: light) {
