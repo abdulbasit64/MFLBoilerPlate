@@ -1,11 +1,15 @@
-import './App.css';
+import "./App.css";
+import useUserStore from "./Stores/UserStore";
 
 function App() {
-  const { isAuthenticated } = useAuth();
-  const userRole = "admin"; // This should be 'admin' or 'user' based on the logged-in user
+  const { user } = useUserStore();
+
+  const isAuthenticated = !!user; // Checks if user is logged in
+  const userRole = user?.role || "guest"; // Get the role, defaulting to "guest" if not logged in'
+
   return (
     <>
-      <Router basename="/eljo">
+      <Router basename="/mfl">
         <Routes>
           {/* Public Routes */}
           <Route element={<PublicRoutes isAuthenticated={isAuthenticated} redirectTo="/admin/dashboard" />}>
@@ -16,7 +20,9 @@ function App() {
           </Route>
 
           {/* Admin Routes */}
-          <Route element={<RequireAdmin isAuthenticated={isAuthenticated} userRole={userRole} redirectTo="/admin/login" />}>
+          <Route
+            element={<RequireAdmin isAuthenticated={isAuthenticated} userRole={userRole} redirectTo="/admin/login" />}
+          >
             <Route
               path="/admin/*"
               element={
@@ -50,11 +56,16 @@ function App() {
 
           {/* Optional: Catch all for 404 */}
 
-          <Route path="*" element={isAuthenticated && userRole == "admin" ? <Navigate to={"/admin"} /> : <Navigate to={"/admin/login"} />} />
+          <Route
+            path="*"
+            element={
+              isAuthenticated && userRole == "admin" ? <Navigate to={"/admin"} /> : <Navigate to={"/admin/login"} />
+            }
+          />
         </Routes>
       </Router>
     </>
   );
 }
 
-export default App
+export default App;
