@@ -1,0 +1,149 @@
+.inputWrapper {
+  margin-bottom: 1rem;
+  /* margin-top: 1.75rem; */
+  position: relative;
+  box-sizing: border-box;
+  min-width: 180px;
+}
+
+.inputWrapper > label {
+  margin-left: 4px;
+  color: var(--inputLabel);
+  font-size: 15px;
+  font-style: normal;
+  /* font-weight: 600; */
+  user-select: none;
+  transition: color 0.15s;
+}
+.mainInput::placeholder {
+  color: var(--placeholder-color);
+}
+.mainInput,
+.react-tel-input .form-control.mainInput {
+  padding: 12px 12px 10px 21px;
+  margin-top: 4px;
+  border: 1.5px solid #d7d7d7;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #333;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  outline: none;
+  border-radius: 10px;
+  transition: border-color 0.15s;
+  background-color: transparent;
+  height: auto;
+  /* display: flex; */
+}
+.morePadding {
+  padding: 12px 26px 10px 21px;
+}
+.mainInput:focus,
+.react-tel-input .form-control.mainInput:focus {
+  border-color: var(--eljo-blue);
+  box-shadow: none;
+}
+.loginInput {
+  color: var(--white-bg);
+}
+.loginInput::placeholder {
+  color: var(--white-bg) !important;
+}
+.loginInput:focus {
+  border-color: var(--white-bg);
+  box-shadow: none;
+}
+
+.inputWrapper:focus-within label,
+.inputWrapper:focus-within .right-icon {
+  color: #212552;
+}
+textarea.mainInput {
+  /* resize: none !important; */
+}
+.passwordWrapper {
+  position: relative;
+}
+.passInput {
+  padding-right: 3rem;
+}
+.input-icon {
+  padding: 10px 25px 10px 35px;
+  font-size: 15px;
+  width: 100%;
+  resize: none;
+  border-radius: 14px;
+  border: 1px solid #f7ece8;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(247, 236, 232, 0.29);
+  outline: none;
+}
+.right-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 12px;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  line-height: 1;
+  color: #707c8b;
+  transition: color 0.15s;
+}
+.mainInput:has(+ .right-icon) {
+  padding-right: 3rem;
+}
+@media screen and (max-width: 991px) {
+  .inputWrapper label {
+    font-size: 14px;
+    left: 14px;
+  }
+  .mainInput {
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+  .react-tel-input .form-control.mainInput {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .inputWrapper label {
+    font-size: 13px;
+    margin-left: 22px;
+    left: 10px;
+  }
+  .mainInput {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+  .react-tel-input .form-control.mainInput {
+    font-size: 13px;
+    padding: 8px 18px;
+  }
+
+  .mainInput:has(+ .right-icon) {
+    padding-right: 30px;
+  }
+  .right-icon {
+    top: 9px;
+    right: 10px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .inputWrapper label {
+    left: 6px;
+    margin-left: 16px;
+  }
+  .mainInput {
+    padding: 8px 14px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .inputWrapper {
+    min-width: 120px;
+    width: 100%;
+  }
+}
