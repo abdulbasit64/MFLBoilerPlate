@@ -1,5 +1,9 @@
+import { Route, Router, Routes } from "react-router-dom";
 import "./App.css";
+import PublicRoutes from "./Router/PublicRoutes";
+import RequireAdmin from "./Router/RequireAdmin";
 import useUserStore from "./Stores/UserStore";
+import AdminLayout from "./Layout/AdminLayout";
 
 function App() {
   const { user } = useUserStore();
@@ -15,8 +19,6 @@ function App() {
           <Route element={<PublicRoutes isAuthenticated={isAuthenticated} redirectTo="/admin/dashboard" />}>
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/forgot-password" element={<ForgetPassword />} />
-            <Route path="/admin/forgot-password2" element={<ForgetPassword2 />} />
-            <Route path="/admin/forgot-password3" element={<ForgetPassword3 />} />
           </Route>
 
           {/* Admin Routes */}
@@ -37,6 +39,7 @@ function App() {
                       path="*"
                       element={
                         <>
+                          {/* Create a beautiful 404 page */}
                           <h1>404</h1>
                         </>
                       }
