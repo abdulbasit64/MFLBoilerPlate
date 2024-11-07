@@ -1,4 +1,4 @@
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import PublicRoutes from "./Router/PublicRoutes";
 import RequireAdmin from "./Router/RequireAdmin";
